@@ -1,0 +1,15 @@
+name = "our-recipe-box-api"
+main = "worker.js"
+compatibility_date = "2026-08-01"
+
+# The password is a SECRET. Never put it in this file or in GitHub.
+# Set it with: npx wrangler secret put HOUSEHOLD_CODE
+# Optional: set ALLOWED_ORIGIN below to your specific GitHub Pages URL.
+[vars]
+ALLOWED_ORIGIN = "*"
+
+# Run `npx wrangler d1 create our-recipe-box` first, then paste the database ID below.
+[[d1_databases]]
+binding = "DB"
+database_name = "our-recipe-box"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
