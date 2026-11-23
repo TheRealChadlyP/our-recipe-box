@@ -1,13 +1,13 @@
 # Our Recipe Box ♡
 
-A cozy, mobile-first personal cookbook for your household. No ads, no recipe-blog filler.
+A warm, farmhouse-inspired, mobile-first personal cookbook for your household. Cranberry-and-cream styling, bespoke kitchen illustrations, gingham accents, script lettering, and no recipe-blog filler.
 
 ## What's inside
 
 - **First recipe included:** Stovetop Velveeta Mac & Cheese, with amounts and steps verified against the original Key to My Lime recipe.
 - **Easy browsing:** Search by name or ingredient, filter by meal type, mark favorites.
 - **Cook mode:** Tap ingredients and numbered steps to check them off as you cook.
-- **Add recipes:** Enter a recipe manually or import a public recipe page URL (with the optional Cloudflare backend enabled).
+- **Add recipes three ways:** Enter one manually; import a public recipe page URL (with the optional Cloudflare backend); or take/upload a photo and extract text directly on the phone using browser OCR. Handwriting and unusual layouts often need correction.
 - **Edit everything:** Imported recipes open in an editor before saving, so you can remove the filler or fix missing details.
 - **Private household sync:** Set up a simple shared code, and both phones use the same recipe collection.
 - **Offline reading and editing:** The app saves a local copy and queues changes until the next sync.
@@ -23,6 +23,7 @@ A cozy, mobile-first personal cookbook for your household. No ads, no recipe-blo
 | Local storage / offline | localStorage + service worker | Built in |
 | Family shared library | Cloudflare Worker + D1 database | Optional, for automatic syncing |
 | Import a recipe by URL | Cloudflare Worker extracts Schema.org Recipe JSON-LD | Optional; uses same backend |
+| Import a recipe from a photo | Tesseract.js OCR running locally in the browser | Built in; first use downloads OCR assets |
 
 **Important limitation:** A static GitHub Pages site cannot reliably download arbitrary recipe websites from the browser because of CORS restrictions. For reliable URL importing, and for two phones to share the same library, you must deploy the included Cloudflare Worker and D1 database. Some websites block robots or don't publish structured recipes, so not every URL will import automatically; manual entry always works.
 
@@ -109,6 +110,15 @@ Adding to your home screen gives a full-screen, app-like experience. The first s
 4. **Review** the filled-in editor and hit **Save recipe**.
 
 Some recipe sites block automated access or have incomplete metadata. The app then suggests using **Write it myself**. The source URL stays attached to imported recipes.
+
+## Saving a recipe from a photo
+
+1. Tap **Add** → **From a photo**.
+2. Choose **Take a photo** (uses the phone camera when supported) or **Choose a picture** from the device.
+3. The browser downloads the Tesseract.js OCR engine on first use, then processes the selected image **locally on the device**; the image isn't posted to the Cloudflare API or stored as a recipe photo.
+4. When recognition completes, the app attempts to identify a recipe name, ingredients, instructions, and tips. An **editable draft** opens so you can correct OCR mistakes before saving.
+
+**Limits:** Printed cards and packaging generally work better than handwriting or cursive. OCR may miss fractional measurements, split instructions, and misplace headings. Always review the ingredient quantities and cooking directions carefully. The app does **not** automatically interpret recipes as reliably as a dedicated multimodal AI service; it uses heuristic parsing after recognizing text. The OCR library and its language data require internet access on first use. The photo feature doesn't depend on the family Cloudflare backend.
 
 ## Backups and troubleshooting
 

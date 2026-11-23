@@ -12,6 +12,8 @@ const navigator={onLine:false};
 const context={document,localStorage,location,window,navigator,setTimeout(){return 1;},clearTimeout(){},setInterval(){},URL,URLSearchParams,Date,JSON,Math,console,confirm(){return true;},FormData:class{constructor(target){this.data=target.data||{};}get(key){return this.data[key]??'';}},globalThis:{crypto:{randomUUID(){return'test-uuid-001';}}}};
 vm.runInNewContext(fs.readFileSync(new URL('../app.js',import.meta.url),'utf8'),context);
 assert.match(element('main').innerHTML,/Creamy Velveeta Mac &amp; Cheese/);
+assert.match(element('main').innerHTML,/kitchen-still-life\.svg/);
+assert.doesNotMatch(element('main').innerHTML,/card-emoji/);
 assert.equal(JSON.parse(map.get('our-recipe-box-v1')).length,1);
 function click(selectors){const target={closest(selector){return selectors[selector]||null;}};handles['main:click']({target});}
 click({'[data-open]':{dataset:{open:'velveeta-mac-cheese'}}});
@@ -19,6 +21,10 @@ assert.match(element('main').innerHTML,/Let\'s make it/);
 assert.match(element('main').innerHTML,/2 cups \(8 oz\)/);
 assert.match(element('main').innerHTML,/data-check=\"ingredient\"/); // checkboxes
 click({'[data-nav]':{dataset:{nav:'add'}}});
+click({'#tab-photo':{}});
+assert.match(element('main').innerHTML,/Take a photo/);
+assert.match(element('main').innerHTML,/recipe-photo-camera/);
+assert.match(element('main').innerHTML,/Choose a picture/);
 click({'#tab-manual':{}});
 const data={name:'Test Apple Crisp',description:'Tasty',category:'Dessert',emoji:'🍎',prepMinutes:'10',cookMinutes:'25',servings:'4 servings',ingredients:'4 apples\n1 cup oats',steps:'Slice apples\nBake',tips:'Serve warm',sourceUrl:'',photoUrl:''};
 handles['main:submit']({target:{id:'recipe-form',data},preventDefault(){}});
@@ -26,4 +32,4 @@ assert.match(element('main').innerHTML,/Test Apple Crisp/);
 assert.equal(JSON.parse(map.get('our-recipe-box-v1')).length,2);
 click({'[data-nav]':{dataset:{nav:'settings'}}});
 assert.match(element('main').innerHTML,/Shared family recipe box/);
-console.log('Smoke tests passed: seeded recipe, detail, manual add, settings.');
+console.log('Smoke tests passed: farmhouse UI, seeded recipe, detail, photo entry, manual add, settings.');

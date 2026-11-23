@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="660" viewBox="0 0 760 660" role="img" aria-labelledby="title desc">
+<title id="title">A cozy family cookbook</title><desc id="desc">An illustrated handwritten recipe card on a wooden cutting board surrounded by kitchen herbs, a wooden spoon and a striped tea towel.</desc>
+<defs>
+  <pattern id="linen" width="24" height="24" patternUnits="userSpaceOnUse"><rect width="24" height="24" fill="#EEDAC4"/><path d="M0 0H24M0 0V24" stroke="#D7BEB2" stroke-width="1" opacity=".35"/></pattern>
+  <pattern id="cloth" width="32" height="32" patternUnits="userSpaceOnUse"><rect width="32" height="32" fill="#FCF2E2"/><path d="M0 0h32M0 0v32" stroke="#B85C58" stroke-width="6" opacity=".5"/><path d="M16 0V32M0 16H32" stroke="#B85C58" stroke-width="2" opacity=".35"/></pattern>
+  <filter id="soft" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="18" stdDeviation="17" flood-color="#60372A" flood-opacity=".2"/></filter>
+  <filter id="tiny" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#60372A" flood-opacity=".12"/></filter>
+  <linearGradient id="wood" x1="0" x2="1"><stop stop-color="#DDB487"/><stop offset=".5" stop-color="#EECDA4"/><stop offset="1" stop-color="#C99061"/></linearGradient>
+</defs>
+<rect width="760" height="660" fill="url(#linen)"/>
+<circle cx="375" cy="300" r="282" fill="#F8E9D5" opacity=".65"/>
+<g transform="translate(30 40) rotate(-19 115 100)" filter="url(#tiny)"><rect x="-45" y="-62" rx="20" width="310" height="285" fill="url(#cloth)"/><path d="M-20 -42H239V200H-20Z" fill="none" stroke="#BE7470" stroke-width="3" opacity=".34"/></g>
+<g transform="translate(125 77) rotate(-12 256 260)" filter="url(#soft)">
+ <rect x="105" y="72" width="418" height="481" rx="42" fill="#9B6746"/>
+ <rect x="119" y="81" width="390" height="453" rx="33" fill="url(#wood)"/>
+ <rect x="137" y="98" width="354" height="417" rx="23" fill="none" stroke="#F8E3C1" stroke-width="3" opacity=".55"/>
+ <ellipse cx="309" cy="136" rx="22" ry="14" fill="#B47A51"/><ellipse cx="309" cy="136" rx="12" ry="7" fill="#835338"/>
+ <path d="M158 170q90 -22 175 -10M160 185q70 -15 140 -5M175 490q118 -12 230 -7" stroke="#A8764E" stroke-width="3" fill="none" opacity=".32"/>
+</g>
+<g transform="translate(220 154) rotate(6 220 210)" filter="url(#soft)">
+ <rect x="18" y="22" width="405" height="415" rx="13" fill="#FFF9EC"/>
+ <rect x="35" y="39" width="370" height="380" rx="7" fill="none" stroke="#C69F86" stroke-width="2" stroke-dasharray="5 8"/>
+ <path d="M65 56H374" stroke="#E6CDBC" stroke-width="1"/>
+ <g fill="#DFCAB6"><circle cx="45" cy="85" r="6"/><circle cx="45" cy="166" r="6"/><circle cx="45" cy="247" r="6"/><circle cx="45" cy="328" r="6"/></g>
+ <g stroke="#C8B9A9" fill="none" stroke-width="2"><path d="M45 85q-23 -10 -24 6q-2 12 15 11"/><path d="M45 166q-23 -10 -24 6q-2 12 15 11"/><path d="M45 247q-23 -10 -24 6q-2 12 15 11"/><path d="M45 328q-23 -10 -24 6q-2 12 15 11"/></g>
+ <text x="223" y="102" fill="#97585A" text-anchor="middle" letter-spacing="4" font-family="Georgia,serif" font-size="15">FROM OUR KITCHEN</text>
+ <path d="M120 126h207" stroke="#CEADA0" stroke-width="2"/>
+ <text x="222" y="174" fill="#653B39" text-anchor="middle" font-family="Georgia,serif" font-size="41" font-style="italic">Family</text>
+ <text x="222" y="227" fill="#653B39" text-anchor="middle" font-family="Georgia,serif" font-size="45" font-style="italic">Favorites</text>
+ <path d="M118 264q50 14 99 0t102 0" stroke="#C37672" stroke-width="3" fill="none"/>
+ <g fill="none" stroke="#8B9C76" stroke-linecap="round" stroke-width="4"><path d="M210 340q-30 -35 -21 -66M210 340q25 -37 14 -75"/><path d="M190 299q-31 -12 -25 -36M192 311q-27 -2 -30 -26M201 290q24 -24 40 -20M213 313q25 -20 32 -42"/></g>
+ <g fill="#8B9C76"><ellipse cx="166" cy="261" rx="17" ry="7" transform="rotate(38 166 261)"/><ellipse cx="163" cy="288" rx="17" ry="7" transform="rotate(28 163 288)"/><ellipse cx="236" cy="268" rx="17" ry="7" transform="rotate(-37 236 268)"/><ellipse cx="248" cy="287" rx="17" ry="7" transform="rotate(-29 248 287)"/></g>
+ <path d="M128 361h188" stroke="#E4CABB" stroke-width="2"/><text x="222" y="395" text-anchor="middle" fill="#BB736D" font-family="Georgia,serif" font-size="22" font-style="italic">made with love</text>
+</g>
+<g transform="translate(558 380) rotate(31 45 118)" filter="url(#tiny)"><path d="M33 22q-3 -16 18 -18q23 4 18 25l-10 73q-1 12-10 12h-2q-11 0 -12 -12Z" fill="#BD8451"/><rect x="43" y="108" width="14" height="160" rx="7" fill="#DDAA72"/><path d="M49 124v118" stroke="#A26E43" stroke-width="2"/><ellipse cx="49" cy="242" rx="3" ry="3" fill="#8E6347"/></g>
+<g transform="translate(52 407) rotate(-23 100 110)" filter="url(#tiny)"><path d="M104 215Q91 124 130 36" stroke="#66785C" stroke-width="7" fill="none" stroke-linecap="round"/><g fill="#869A71" stroke="#657C5A" stroke-width="1"><ellipse cx="126" cy="54" rx="13" ry="30" transform="rotate(41 126 54)"/><ellipse cx="101" cy="92" rx="14" ry="33" transform="rotate(-40 101 92)"/><ellipse cx="146" cy="112" rx="15" ry="37" transform="rotate(40 146 112)"/><ellipse cx="93" cy="151" rx="14" ry="34" transform="rotate(-44 93 151)"/><ellipse cx="135" cy="173" rx="14" ry="37" transform="rotate(37 135 173)"/></g></g>
+<g transform="translate(615 81)" stroke="#A76F68" fill="none" stroke-width="3" stroke-linecap="round"><path d="M8 60l27 -23 17 6 18 -29M31 49q-12 -18 -26 -18M44 37q0 -19 -14 -27M51 32q24 -9 27 -27M27 54q25 15 23 31"/><g fill="#BD807B" stroke="none"><circle cx="67" cy="17" r="9"/><circle cx="4" cy="32" r="8"/><circle cx="30" cy="12" r="7"/></g></g>
+<g fill="#B96F68" opacity=".8"><path d="M77 315l8 -6 8 6-8 6Z"/><path d="M635 559l8 -6 8 6-8 6Z"/><path d="M666 303l5 -4 5 4-5 4Z"/></g>
+</svg>
